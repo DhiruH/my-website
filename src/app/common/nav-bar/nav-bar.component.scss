@@ -1,0 +1,40 @@
+a {
+    color: inherit;
+}
+
+.nav {
+    position: fixed;
+    top: 0px;
+    z-index: 11;
+    padding: 0px 50px;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: rgba(10, 25, 47, 0.85);
+    color: inherit;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+}
+
+.nav-items a{
+    list-style: none;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.nav-items a:hover{
+    color: var(--green);;
+    transition:500ms;
+}
+.menu-button{
+    color: inherit;
+    background-color: transparent;
+}
+
+.mat-icon{
+    cursor: pointer;
+    color: var(--green);
+    height: 20px;
+}

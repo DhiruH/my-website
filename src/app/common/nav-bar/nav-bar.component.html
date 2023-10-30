@@ -1,0 +1,32 @@
+<ng-container>
+    <nav class="nav" fxLayout="row" fxLayoutAlign="space-between flex-end">
+        <div fxLayout="column" fxLayoutAlign="start" class="logo">
+            <h3>Hello</h3>
+        </div>
+        <div fxHide.lt-md="true" fxLayout="column" fxLayoutAlign="end">
+            <ol class="nav-items" fxLayout="row" fxLayoutGap="50px">
+                <li fxFlex fxLayoutAlign="center" class="items"><a href="#">About</a></li>
+                <li fxFlex fxLayoutAlign="center" class="items"><a href="#">Experience</a></li>
+                <li fxFlex fxLayoutAlign="center" class="items"><a href="#">Work</a></li>
+                <li fxFlex fxLayoutAlign="center" class="items"><a href="#">Contact</a></li>
+            </ol>
+        </div>
+        <!-- <div fxHide.gt-sm="true" fxLayout="column" fxLayoutAlign="end">
+            <button mat-button (click)="snav.toggle()" (click)="onMenuClick()" class="menu-button">
+                <mat-icon *ngIf="IsMenuOpen" class="mat-icon">menu</mat-icon>
+                <mat-icon *ngIf="!IsMenuOpen" class="mat-icon">close</mat-icon>
+            </button>
+        </div> -->
+    </nav>
+
+    <!-- <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="50">
+        <mat-sidenav #snav [mode]="'side'" [fixedInViewport]="true" fixedTopGap="0">
+            <mat-nav-list >
+                <a href="#">About</a>
+                <a href="#">Experience</a>
+                <a href="#">Work</a>
+                <a href="#">Contact</a>
+            </mat-nav-list>
+        </mat-sidenav>
+    </mat-sidenav-container> -->
+</ng-container>
