@@ -1,0 +1,33 @@
+<mat-sidenav-container  class="sidenav-container" >
+  <mat-sidenav fxHide fxShow.xs="true"  #drawer class="sidenav"  fixedInViewport position="end"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>
+      <mat-icon aria-label="Side nav toggle icon" (click)="drawer.toggle()" class="mat-icon">close</mat-icon>
+    </mat-toolbar>
+    <mat-nav-list (click)="drawer.toggle()">
+      <a mat-list-item routerLink="/about-us">About us</a>
+      <a mat-list-item routerLink="/prices">Prices</a>
+      <a mat-list-item routerLink="/start-page">Start page</a>
+      <a mat-list-item routerLink="/offer">Offer</a>
+      <a mat-list-item routerLink="/contact">Contact</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="mat-toolbar" fxLayout fxLayoutAlign="space-around center" fxLayoutAlign.lt-md="space-between center">
+      <div>
+        <span>my-website</span>
+      </div>
+      <mat-nav-list fxShow fxHide.lt-sm="true" fxLayout="row">
+        <button mat-button routerLink="/about-us">About us</button>
+        <button mat-button routerLink="/about-us">About us</button>
+        <button mat-button routerLink="/about-us">About us</button>
+        <button mat-button routerLink="/about-us">About us</button>
+      </mat-nav-list>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
