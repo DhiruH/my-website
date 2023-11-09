@@ -5,12 +5,11 @@
     <mat-toolbar>
       <mat-icon aria-label="Side nav toggle icon" (click)="drawer.toggle()" class="mat-icon">close</mat-icon>
     </mat-toolbar>
-    <mat-nav-list (click)="drawer.toggle()">
-      <a mat-list-item routerLink="/about-us">About us</a>
-      <a mat-list-item routerLink="/prices">Prices</a>
-      <a mat-list-item routerLink="/start-page">Start page</a>
-      <a mat-list-item routerLink="/offer">Offer</a>
-      <a mat-list-item routerLink="/contact">Contact</a>
+    <mat-nav-list fxLayout="column" (click)="drawer.toggle()">
+      <a class="nav-items" mat-button routerLink="/about-us">Home</a>
+      <a class="nav-items" mat-button routerLink="/prices">Contact</a>
+      <a class="nav-items" mat-button routerLink="/start-page">About Us</a>
+      <a class="nav-items" mat-button routerLink="/offer">Blogs</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -19,10 +18,10 @@
         <span>my-website</span>
       </div>
       <mat-nav-list fxShow fxHide.lt-sm="true" fxLayout="row">
-        <button mat-button routerLink="/about-us">About us</button>
-        <button mat-button routerLink="/about-us">About us</button>
-        <button mat-button routerLink="/about-us">About us</button>
-        <button mat-button routerLink="/about-us">About us</button>
+        <button class="nav-items" mat-button routerLink="/about-us">Contact</button>
+        <button class="nav-items" mat-button routerLink="/about-us">Home</button>
+        <button class="nav-items" mat-button routerLink="/about-us">About us</button>
+        <button class="nav-items" mat-button routerLink="/about-us">Blogs</button>
       </mat-nav-list>
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
