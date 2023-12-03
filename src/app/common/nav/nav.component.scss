@@ -3,7 +3,7 @@
 }
 
 .sidenav {
-  width: 200px;
+  width: 50%;
   // background-color: var(--navy);
 }
 
@@ -16,4 +16,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+.nav-items:hover{
+  background-color: var(--light-slate);
 }
